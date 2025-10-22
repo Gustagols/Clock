@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>react-bundle</title>
+</head>
+
+<style>
+  .js-welcome-container {
+    font: normal bold 14px Arial;
+    /* border: 1px solid rebeccapurple; */
+    width: fit-content;
+    margin-left: 15px;
+
+  }
+
+  .js-oi-container {
+    width: 100px;
+    height: 40px;
+    border: 1px solid rebeccapurple;
+    margin-top: 10px;
+    display: grid;
+    place-content: center;
+  }
+
+  button {
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 110, 255, 0.6);
+    color: white;
+    transition: filter 0.15s;
+    cursor: pointer;
+  }
+
+  button:hover {
+    filter: brightness(0.9);
+  }
+
+  button:active {
+    filter: brightness(1);
+  }
+</style>
+
+<body>
+  <!-- <div id="root"></div> -->
+
+  <div class="js-welcome-container"></div>
+  <div class="js-oi-container"></div>
+  <p class="p-container"></p>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+   
+    const button = <button>o</button>;
+
+    const container = document.querySelector('.js-welcome-container');
+    ReactDOM.createRoot(container).render('Welcome');
+
+    const oi = document.querySelector('.js-oi-container');
+    ReactDOM.createRoot(oi).render(button);
+
+    const text = document.querySelector('.p-container');
+    ReactDOM.createRoot(text).render('paragraph of text');
+
+    const div = (
+      <div>
+        <p>Lorem</p>
+        <li>list</li>
+      </div>
+    );
+
+  </script>
+
+</body>
+</html>
