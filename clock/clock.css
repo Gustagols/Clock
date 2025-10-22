@@ -1,0 +1,42 @@
+body { 
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.89); 
+    height: 90vh;  
+}
+
+.clock-container { 
+    display: grid; place-items: center; text-align: center; 
+    position: fixed;
+}
+
+.clock { color: white; font: normal bold 40px Arial; }
+
+.js-button { 
+    color: white;
+    background-color: rgba(0, 0, 0, 0.315);
+    width: 100px; height: 40px;
+    border: 2px solid white;
+    border-radius: 4px;
+    transition: filter 0.15s;
+    cursor: pointer;
+}
+
+.js-button:hover { filter: brightness(0.9); }
+.js-button:active { filter: brightness(1); }
+
+.clock-txt { 
+    color: white;
+    font: normal lighter 16px times;
+    line-height: 24px;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 15%;
+}
+
+
+

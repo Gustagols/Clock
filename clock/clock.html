@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clock</title>
+    
+    <link rel="stylesheet" href="clock.css">
+   
+    <!-- Correct CDN links -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" defer></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" defer></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" defer></script>
+    
+    <!-- dayJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.18/dayjs.min.js"></script>
+</head>
+
+<body>
+    <p class="clock-txt">
+        This is a clock.
+        It pauses when you press stop,
+        and syncs to your time when you press play.
+    </p>
+
+    <div class="clock-container">
+        <div class="clock"></div>
+        <button class="js-button">Stop</button>
+    </div>
+
+    <script type="text/babel" src="clock.jsx"></script>
+</body>
+</html>
